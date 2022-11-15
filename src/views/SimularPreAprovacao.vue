@@ -3,7 +3,7 @@
     <h1>Simular Pré-Aprovação</h1>
     <nav>
       <div>
-        <router-link to="/">Página Incial</router-link>
+        <router-link to="/">Página Inicial</router-link>
         <router-link to="/simular_locacao">Simular Locação</router-link>
       </div>
     </nav>
