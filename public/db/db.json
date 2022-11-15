@@ -1,0 +1,72 @@
+{
+  "simulacoes": [
+    {
+      "cpf_cliente": "434343434",
+      "imovel": "01",
+      "status": "aprovado",
+      "id": "9GAqZ8J"
+    },
+    {
+      "cpf_cliente": "43434343434",
+      "imovel": "01",
+      "status": "aprovado",
+      "id": "s1uU5oG"
+    },
+    {
+      "cpf_cliente": "12345678",
+      "imovel": "01",
+      "status": "aprovado",
+      "id": "QVZ7ADt"
+    }
+  ],
+  "imoveis": [
+    {
+      "id": "01",
+      "foto": "../db/fotos_imoveis/01.jpg",
+      "valor": 400,
+      "tipo": "Mensal",
+      "telefone": "(88) 98888-8888",
+      "endereco": {
+        "rua": "Rua Zero Um",
+        "bairro": "Bairro Zero Um",
+        "numero": "01",
+        "cidade": "Russas",
+        "uf": "CE",
+        "cep": "62900-000"
+      },
+      "situacao": "Disponível"
+    },
+    {
+      "id": "02",
+      "foto": "../db/fotos_imoveis/02.jpg",
+      "valor": 4000,
+      "tipo": "Anual",
+      "telefone": "(88) 98888-8888",
+      "endereco": {
+        "rua": "Rua Zero Dois",
+        "bairro": "Bairro Zero Dois",
+        "numero": "02",
+        "cidade": "Russas",
+        "uf": "CE",
+        "cep": "62900-000"
+      },
+      "situacao": "Disponível"
+    },
+    {
+      "id": "03",
+      "foto": "../db/fotos_imoveis/03.jpg",
+      "valor": 40,
+      "tipo": "Diário",
+      "telefone": "(88) 98888-8888",
+      "endereco": {
+        "rua": "Rua Zero Três",
+        "bairro": "Bairro Zero Três",
+        "numero": "03",
+        "cidade": "Russas",
+        "uf": "CE",
+        "cep": "62900-000"
+      },
+      "situacao": "Disponível"
+    }
+  ]
+}
