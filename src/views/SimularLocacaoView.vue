@@ -3,27 +3,32 @@
     <h1>Simular Locação</h1>
     <nav>
       <div>
-        <router-link to="/">Página Incial</router-link>
+        <router-link to="/">Página Inicial</router-link>
         <router-link to="/simular_pre_aprovacao">Simular Pré-Aprovação</router-link>
       </div>
     </nav>
     <div class="lista_imoveis" v-show="!imovel">
-      <div v-for="(imovel, index) in imoveis" :key="index">
-        <img :src="imovel.foto"/>
-        <p> R$ {{ imovel.valor.toFixed(2) }} / {{imovel.tipo}}</p>
-        <p> {{ imovel.endereco.rua }}, Nº {{ imovel.endereco.numero }}, {{ imovel.endereco.bairro }}.</p>
-        <p>{{ imovel.endereco.cidade }} - {{ imovel.endereco.uf }}</p>
-        <button @click="setImovel(imovel)">Simular</button>
+      <div v-for="(imovel, index) in imoveis" :key="index" class="imovel">
+        <img :src="imovel.foto" />
+        <div class="descricao">
+          <p><b>Valor: </b> R$ {{ imovel.valor.toFixed(2) }} / {{ imovel.tipo }}</p>
+          <p><b>Endereço: </b> {{ imovel.endereco.rua }}, Nº {{ imovel.endereco.numero }}, {{ imovel.endereco.bairro }},
+            {{ imovel.endereco.cidade }} - {{ imovel.endereco.uf }}, CEP {{ imovel.endereco.cep }}.
+          </p>
+        </div>
+        <div class="actions">
+          <button @click="setImovel(imovel)" class="btn-blue">Simular Locação</button>
+        </div>
       </div>
     </div>
-    <div id="form_simulacao" v-show="imovel && !success">
+    <div class="form_simulacao" v-show="imovel && !success">
       <label>
-        CPF:
+        <b>CPF: </b>
         <input v-model="cpf" type="text" class="cpf_cliente" placeholder="Digite aqui o seu CPF" required />
       </label>
-      <button @click="simular()">Realizar simulação</button>
+      <button @click="simular()" class="btn-blue">Realizar simulação</button>
     </div>
-    <h3 id="msg_sucesso" v-show="success">Simulação enviada para aprovação.</h3>
+    <h3 class="msg_sucesso" v-show="success">Simulação enviada para aprovação.</h3>
   </div>
 </template>
 
@@ -73,3 +78,34 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.lista_imoveis {
+  margin-top: 30px;
+  border-top: 3px solid #345EA8;
+  padding-top: 20px;
+}
+
+img {
+  width: 400px;
+  border-radius: 5px;
+}
+
+.imovel {
+  margin: 10px 0px;
+  border: 2px solid #345EA8;
+  border-radius: 5px;
+  background-color: white;
+  max-width: 400px;
+}
+
+.descricao {
+  padding: 0px 10px;
+}
+
+.form_simulacao {
+  margin-top: 30px;
+  border-top: 3px solid #345EA8;
+  padding-top: 20px;
+}
+</style>

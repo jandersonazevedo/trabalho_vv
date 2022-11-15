@@ -3,20 +3,14 @@
     {
       "cpf_cliente": "123456789",
       "imovel": "01",
-      "status": "aprovado",
+      "status": "rejeitado",
       "id": 1
     },
     {
       "cpf_cliente": "12345678910",
       "imovel": "02",
-      "status": "pendente",
+      "status": "rejeitado",
       "id": 2
-    },
-    {
-      "cpf_cliente": "12345678963",
-      "imovel": "03",
-      "status": "aprovado",
-      "id": 3
     }
   ],
   "imoveis": [
